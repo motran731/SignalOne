@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="This is where your description goes">
+    <meta name="keywords" content="one, two, three">
+
+    <title>Title in the tab</title>
+
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1> Alteplase</h1>
+    <section>
+        <form>
+            <label for="alteplase"> Alteplase</label>
+            <br>
+            <table>
+                <tr>
+                    <th scope="col"> Dosing </th>
+                    <td>Activase 100 mg vial with 100 ml SWFI or 50 mg vial with 50 ml SWFI diluent (final concentration
+                        1
+                        mg/ml) </td>
+
+                </tr>
+                <tr>
+                    <th scope="col"> Indication </th>
+                    <td>Acute Myocardial Infarction, Ischemic Stroke, Pulmonary Embolism </td>
+                </tr>
+            </table>
+
+            <br>
+            <label for="ptweight"> Enter Patient's Weight (kg) </label>
+            <br>
+            <input id="weight" type="text" placeholder="weight">
+            <br>
+            <br>
+            <label for="indication"> Choose Indication: </label>
+            <br>
+            <input type="radio" name="indication" value="myocardial" id="myocardialSelect" checked="checked"> Myocardial
+            Infarction </input>
+            <br>
+            <input type="radio" name="indication" value="stroke" id="strokeSelect" checked="checked"> Stroke </input>
+            <br>
+            <input type="radio" name="indication" value="pulmonary" id="pulmonarySelect" checked="checked"> Pulmonary
+            Embolism </input>
+            <br>
+            <h2> Dosing Instructions </h2>
+            <br>
+            
+            <div id="myocardialTable" class="hidden"> <!--weight >67-->
+                <h3> Total alteplase dose should not exceed 100 mg</h3>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th scope="col"> Stage </th>
+                        <th scope="col"> Administration </th>
+                        <th scope="col"> Dose </th>
+                        <th scope="col"> Duration </th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td> 1</td>
+                        <td> Bolus </td>
+                        <td> 15 mg </td>
+                        <td> 2 mins </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td> 2</td>
+                        <td> Infusion </td>
+                        <td id="myoInfusion1"> 50 mg </td>
+                        <td> 30 mins </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td> 3</td>
+                        <td> Infusion </td>
+                        <td id="myoInfusion2"> 35 mg </td>
+                        <td> 60 mins </td>
+                    </tr>
+
+                </table>
+            </div>
+
+           
+            <div id="strokeTable" class="hidden"><!--weight >100kg-->
+                <h3> Total alteplase dose should not exceed 90 mg</h3>
+                <p> The recommended dose is 0.9 mg/kg</p>
+                <label for="dose"> Dose </label>
+                <label id="strokeDose" for="dose"> Dose </label>
+                <!--<input id="strokeDose" type="textbox" placeholder="" name="display">-->
+                <table>
+                    <tr>
+                        <th></th>
+                        <th scope="col"> Stage </th>
+                        <th scope="col"> Administration </th>
+                        <th scope="col"> Dose </th>
+                        <th scope="col"> Duration </th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td> 1 </td>
+                        <td> Bolus </td>
+                        <td id="strokeBolus"> 9 mg </td>
+                        <td> 1 min </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td> 2 </td>
+                        <td> Infusion </td>
+                        <td id="strokeInfusion"> 81 mg </td>
+                        <td> 60 min </td>
+                    </tr>
+                </table>
+            </div>
+
+          <!-- <div id="strokeTable2" class="hidden"> 
+                <h3> Total alteplase dose should not exceed 90 mg</h3>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th scope="col"> Stage </th>
+                        <th scope="col"> Administration </th>
+                        <th scope="col"> Dose </th>
+                        <th scope="col"> Duration </th>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td> 1 </td>
+                        <td> bolus </td>
+                        <td> (0.09mg/kg) (10% of (0.09mg/kg)) </td>
+                        <td> 1 min </td>
+                    </tr>
+                    <tr>
+                        <th></th>
+                        <td> 2 </td>
+                        <td> infusion </td>
+                        <td> 0.81 mg/g </td>
+                        <td> 60 min </td>
+                    </tr>
+                </table>
+            </div>-->
+
+            <div id="pulmonaryTable" class="hidden">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th scope="col"> Stage </th>
+                        <th scope="col"> Administration </th>
+                        <th scope="col"> Dose </th>
+                        <th scope="col"> Duration </th>
+                    </tr>
+                    </tr>
+                </table>
+            </div>
+
+
+        </form>
+    </section>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
